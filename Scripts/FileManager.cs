@@ -13,7 +13,7 @@ using UnityEngine;
 public class FileManager : MonoBehaviour
 {
     [Header("File Section")]
-    public string fileName = "save.txt";
+    public string fileName = "save";
 
     public enum fileExtension
     {
@@ -43,7 +43,7 @@ public class FileManager : MonoBehaviour
 
     public string FileExtension(string name)
     {
-        string fullFileName;
+        string fullFileName = "";
 
         switch (myFile)
         {
@@ -153,7 +153,7 @@ public class FileManager : MonoBehaviour
          * https://docs.microsoft.com/pt-br/dotnet/api/system.io.file.appendalltext
          */
 
-        File.AppendAllText(path, content);
+        File.AppendAllText(pathFile, content);
 
         Debug.Log("Arquivo " + fullName + " atualizado!");
     }
